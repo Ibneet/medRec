@@ -4,7 +4,7 @@ import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import '../screens/home/home_screen.dart';
 import '../screens/lab_reports/lab_reports_screen.dart';
 import '../screens/prescriptions/prescriptions_screen.dart';
-import '../screens/prev_health_issues/prev_health_issues_screen.dart';
+import '../screens/user_profile/user_profile_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   static const routeName = '/';
@@ -17,7 +17,7 @@ class _TabsScreenState extends State<TabsScreen> {
     HomeScreen(),
     LabReportsScreen(),
     PrescriptionsScreen(),
-    PrevHealthIssuesScreen()
+    UserProfileScreen()
   ];
   int _selectedScreenIndex = 0;
 
@@ -89,14 +89,14 @@ class _TabsScreenState extends State<TabsScreen> {
           BubbleBottomBarItem(
               backgroundColor: Theme.of(context).primaryColor,
               icon: Icon(
-                Icons.history,
+                Icons.person_pin,
                 color: Colors.black,
               ),
               activeIcon: Icon(
-                Icons.history,
+                Icons.person_pin,
                 color: Theme.of(context).primaryColor,
               ),
-              title: Text("Health Issues"))
+              title: Text("Profile"))
         ],
       ),
     );
