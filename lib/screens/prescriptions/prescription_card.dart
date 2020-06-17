@@ -37,6 +37,10 @@ class PrescriptionCard extends StatelessWidget {
                 margin: EdgeInsets.only(top: 120),
                 child: Text(
                   name.toUpperCase(),
+                  style: TextStyle(
+                    fontFamily: 'GentiumBookBasic',
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ],

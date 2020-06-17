@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../prescriptions/prescription_card.dart';
 import '../utils.dart';
+
+import '../prescriptions/prescription_card.dart';
+import '../prescriptions/prescription_flip_card.dart';
 
 var docs = [
   {
@@ -91,6 +93,7 @@ class PrescriptionsScreen extends StatelessWidget {
                 },
               ),
             ),
+            PrescriptionFlipCard(),
           ],
         ),
       ),
