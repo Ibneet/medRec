@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 
+import '../prescriptions/prescription_card.dart';
 import '../utils.dart';
 
 var docs = [
   {
-    'name': 'Dummy',
+    'name': 'Disease 1',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Dummy',
+    'name': 'Disease 1',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Dummy',
+    'name': 'Disease 1',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Dummy',
+    'name': 'Disease 1',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Dummy',
+    'name': 'Disease 1',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
@@ -66,7 +67,7 @@ class PrescriptionsScreen extends StatelessWidget {
                           ]),
                       child: Center(
                         child: Text(
-                          'Your Recent Prescriptions',
+                          'Your Current Prescriptions',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
@@ -80,43 +81,13 @@ class PrescriptionsScreen extends StatelessWidget {
               ],
             ),
             Container(
-              height: 250,
+              height: 180,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: docs.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    // : EdgeInsets.fromLTRB(10, 10, 5, 10),
-                    child: Column(
-                      children: <Widget>[
-                        InkWell(
-                          onTap: () {},
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.grey[400],
-                                  blurRadius: 30,
-                                  offset: Offset(1, 10),
-                                ),
-                              ],
-                            ),
-                            child: Image.network(
-                              docs[index]['url'],
-                              height: 125,
-                              width: 125,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                        Text(docs[index]['name'].toUpperCase()),
-                      ],
-                    ),
-                  );
+                  return PrescriptionCard(
+                      docs[index]['name'], docs[index]['url']);
                 },
               ),
             ),
