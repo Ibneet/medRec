@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
 
 import '../prescriptions/front_card.dart';
+import '../prescriptions/back_card.dart';
 
 class PrescriptionFlipCard extends StatelessWidget {
   @override
@@ -14,7 +15,7 @@ class PrescriptionFlipCard extends StatelessWidget {
       child: FlipCard(
         direction: FlipDirection.HORIZONTAL,
         front: FrontCard(),
-        back: FrontCard(),
+        back: BackCard(),
       ),
     );
   }
