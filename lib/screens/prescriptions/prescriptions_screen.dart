@@ -40,12 +40,44 @@ class PrescriptionsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            _buildTopStack(appHeight, context),
-            Container(
-              height: 40,
-              child: Center(
-                child: Text('DISEASES TO BE CURED'),
-              ),
+            Stack(
+              alignment: AlignmentDirectional.topCenter,
+              children: <Widget>[
+                _buildTopStack(appHeight, context),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+                      height: appHeight * 0.1,
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      height: appHeight * 0.08,
+                      width: MediaQuery.of(context).size.width - 40,
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(28)),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black12,
+                                spreadRadius: 5.5,
+                                blurRadius: 5.5)
+                          ]),
+                      child: Center(
+                        child: Text(
+                          'Your Recent Prescriptions',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: 'GentiumBookBasic',
+                              color: Colors.black),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             Container(
               height: 250,
@@ -54,9 +86,8 @@ class PrescriptionsScreen extends StatelessWidget {
                 itemCount: docs.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    margin: 
-                         EdgeInsets.fromLTRB(10, 10, 10, 10),
-                        // : EdgeInsets.fromLTRB(10, 10, 5, 10),
+                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    // : EdgeInsets.fromLTRB(10, 10, 5, 10),
                     child: Column(
                       children: <Widget>[
                         InkWell(
@@ -119,7 +150,7 @@ class PrescriptionsScreen extends StatelessWidget {
   _buildTitle(double appHeight) {
     return Positioned(
       left: 20.0,
-      top: 50,
+      top: 30,
       child: Row(
         children: <Widget>[
           Text(

@@ -111,7 +111,7 @@ _buildBackgroundCover(double appHeight) {
 _buildTitle(double appHeight) {
   return Positioned(
     left: 20.0,
-    top: 50,
+    top: 30,
     child: Row(
       children: <Widget>[
         Text(
