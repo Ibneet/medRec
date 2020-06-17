@@ -6,27 +6,27 @@ var docs = [
   {
     'name': 'Dummy',
     'url':
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYSTMzk9FPh5GhZioytH56hpdwkJ3bS2rKU0FptKI8MXvETuVN&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
     'name': 'Dummy',
     'url':
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYSTMzk9FPh5GhZioytH56hpdwkJ3bS2rKU0FptKI8MXvETuVN&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
     'name': 'Dummy',
     'url':
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYSTMzk9FPh5GhZioytH56hpdwkJ3bS2rKU0FptKI8MXvETuVN&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
     'name': 'Dummy',
     'url':
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYSTMzk9FPh5GhZioytH56hpdwkJ3bS2rKU0FptKI8MXvETuVN&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
     'name': 'Dummy',
     'url':
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQYSTMzk9FPh5GhZioytH56hpdwkJ3bS2rKU0FptKI8MXvETuVN&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
 ];
 
@@ -54,9 +54,9 @@ class PrescriptionsScreen extends StatelessWidget {
                 itemCount: docs.length,
                 itemBuilder: (context, index) {
                   return Container(
-                    margin: index.isEven
-                        ? EdgeInsets.fromLTRB(10, 10, 5, 10)
-                        : EdgeInsets.fromLTRB(10, 10, 5, 10),
+                    margin: 
+                         EdgeInsets.fromLTRB(10, 10, 10, 10),
+                        // : EdgeInsets.fromLTRB(10, 10, 5, 10),
                     child: Column(
                       children: <Widget>[
                         InkWell(
@@ -108,7 +108,7 @@ class PrescriptionsScreen extends StatelessWidget {
 
   _buildBackgroundCover(double appHeight) {
     return Container(
-      height: appHeight*0.13,
+      height: appHeight * 0.13,
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: purpleGradient,
@@ -125,10 +125,7 @@ class PrescriptionsScreen extends StatelessWidget {
           Text(
             'Prescriptions',
             style: TextStyle(
-              fontSize: 32,
-              color: Colors.white,
-              fontFamily: 'Lobster'
-            ),
+                fontSize: 32, color: Colors.white, fontFamily: 'Lobster'),
           ),
         ],
       ),
