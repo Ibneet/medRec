@@ -33,9 +33,14 @@ class LabCard extends StatelessWidget {
         top: top,
         bottom: bottom,
         right: 10,
+        left: 10,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: Colors.grey,
+          width: 2.0,
+        ),
         image: DecorationImage(
           image: NetworkImage(
             // imageUrl,
@@ -52,74 +57,34 @@ class LabCard extends StatelessWidget {
         ],
       ),
       child: active
-          ? Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: Colors.black87,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+          ? InkWell(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.black87,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
                 ),
-              ),
-              margin: EdgeInsets.only(
-                top: top + 250,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Center(
-                    child: Text(
-                      '$name',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
+                margin: EdgeInsets.only(
+                  top: top + 250,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Center(
+                      child: Text(
+                        '$name',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  // Row(
-                  //   mainAxisSize: MainAxisSize.max,
-                  //   children: <Widget>[
-                  //     Expanded(
-                  //       flex: 5,
-                  //       child: Column(
-                  //         mainAxisAlignment: MainAxisAlignment.center,
-                  //         crossAxisAlignment: CrossAxisAlignment.start,
-                  //         children: <Widget>[
-                  //           Text(
-                  //             '$to',
-                  //             style: TextStyle(
-                  //               color: Colors.white,
-                  //               fontSize: 18,
-                  //               fontWeight: FontWeight.w400,
-                  //             ),
-                  //           ),
-                  //           Divider(
-                  //             color: Colors.white,
-                  //             height: 5,
-                  //           ),
-                  //           Text(
-                  //             '$from',
-                  //             style: TextStyle(
-                  //               color: Colors.white,
-                  //               fontSize: 18,
-                  //               fontWeight: FontWeight.w500,
-                  //             ),
-                  //           ),
-                  //         ],
-                  //       ),
-                  //     ),
-                  //     Spacer(),
-                  //     Expanded(
-                  //       flex: 1,
-                  //       child: Icon(
-                  //         Icons.import_export,
-                  //         color: Colors.white,
-                  //         size: 30,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
-                ],
+                  ],
+                ),
               ),
             )
           : SizedBox(),
