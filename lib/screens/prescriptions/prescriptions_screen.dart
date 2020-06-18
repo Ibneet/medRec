@@ -69,7 +69,7 @@ class PrescriptionsScreen extends StatelessWidget {
                           ]),
                       child: Center(
                         child: Text(
-                          'Your Current Prescriptions',
+                          'Your Current Diseases',
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w700,
