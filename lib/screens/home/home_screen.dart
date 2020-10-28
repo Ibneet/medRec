@@ -20,20 +20,17 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: mainBgColor,
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            _buildTopStack(appHeight, context),
-            SizedBox(height: appHeight*0.07,),
-            _buildRecentVisits(context),
-            _buildRecentVisitsInfo(),
-            _buildRecentVisitsInfo(),
-            _buildRecentVisitsInfo(),
-            _buildRecentVisitsInfo(),
-            _buildRecentVisitsInfo(),
-          ],
-        )
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          _buildTopStack(appHeight, context),
+          SizedBox(
+            height: appHeight * 0.07,
+          ),
+          _buildRecentVisits(context),
+          _buildRecentVisitsInfo(),
+        ],
+      )),
     );
   }
 
@@ -48,20 +45,18 @@ class HomeScreen extends StatelessWidget {
       ],
     );
   }
-                                                                                                                              
+
   _buildBackgroundCover(double appHeight) {
     return Container(
-      height: appHeight*0.3,
+      height: appHeight * 0.3,
       decoration: BoxDecoration(
-        gradient: purpleGradient,
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(40),
-          bottomRight: Radius.circular(40)
-        )
-      ),
+          gradient: purpleGradient,
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(40),
+              bottomRight: Radius.circular(40))),
     );
   }
-                                  
+
   _buildGreeting(double appHeight) {
     return Positioned(
       left: 20.0,
@@ -70,31 +65,31 @@ class HomeScreen extends StatelessWidget {
         children: <Widget>[
           CircleAvatar(
             radius: 50,
-            backgroundImage: NetworkImage(
-              currentUser.imageUrl,
+            backgroundImage: AssetImage(
+              'assets/images/isha.jpeg',
             ),
           ),
-          SizedBox(width: 20,),
+          SizedBox(
+            width: 20,
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Hi Alexa!',
+                'Hi Ibneet!',
                 style: TextStyle(
-                  fontSize: 36,
-                  color: Colors.white,
-                  fontFamily: 'Lobster'
-                ),
+                    fontSize: 36, color: Colors.white, fontFamily: 'Lobster'),
               ),
-              SizedBox(height: appHeight*0.01,),
+              SizedBox(
+                height: appHeight * 0.01,
+              ),
               Text(
                 'How are you feeling today?',
                 style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
-                  fontFamily: 'GentiumBookBasic'
-                ),
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontFamily: 'GentiumBookBasic'),
               )
             ],
           ),
@@ -105,28 +100,23 @@ class HomeScreen extends StatelessWidget {
 
   _buidMoodsHolder(double appHeight, ctx) {
     return Positioned(
-      bottom: -45,
-      child: Container(
-        height: appHeight*0.12,
-        width: MediaQuery.of(ctx).size.width-40,
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(28)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black12,
-              spreadRadius: 5.5,
-              blurRadius: 5.5
-            )
-          ]
-        ),
-        child: MyMoods(),
-      )
-    );
+        bottom: -45,
+        child: Container(
+          height: appHeight * 0.12,
+          width: MediaQuery.of(ctx).size.width - 40,
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(28)),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black12, spreadRadius: 5.5, blurRadius: 5.5)
+              ]),
+          child: MyMoods(),
+        ));
   }
 
-  _buildRecentVisits(ctx){
+  _buildRecentVisits(ctx) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20),
       alignment: Alignment.topLeft,
@@ -136,20 +126,16 @@ class HomeScreen extends StatelessWidget {
           Text(
             'Your recent visits.',
             style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              color: Colors.black
-            ),
+                fontSize: 20, fontWeight: FontWeight.w700, color: Colors.black),
           ),
           FlatButton(
-            onPressed: (){},
+            onPressed: () {},
             child: Text(
               'See All',
               style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: Colors.pink[900]
-            ),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.pink[900]),
             ),
           )
         ],
@@ -157,18 +143,16 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  _buildRecentVisitsInfo(){
+  _buildRecentVisitsInfo() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
       padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 14.0),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(18)
-      ),
+          color: Colors.white, borderRadius: BorderRadius.circular(18)),
       child: Column(
         children: <Widget>[
           Row(
-            mainAxisAlignment: MainAxisAlignment.start ,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               CircleAvatar(
                 radius: 45,
@@ -176,30 +160,28 @@ class HomeScreen extends StatelessWidget {
                   doctor.imageUrl,
                 ),
               ),
-              SizedBox(width: 20,),
+              SizedBox(
+                width: 20,
+              ),
               RichText(
                 text: TextSpan(
-                  text: 'Dr. Stephen',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    height: 1.5,
-                    color: Colors.black
-                  ),
-                  children: [
-                    TextSpan(
-                      text: '\nSunday, June 5th at 10 am\n93 Boston Road\nMarlton, NJ 08053',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w400,
-                        // height: 1.5,
-                        color: Colors.black45
-                      )
-                    )
-                  ]
-                ),
+                    text: 'Dr. Ikshit',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        height: 1.5,
+                        color: Colors.black),
+                    children: [
+                      TextSpan(
+                          text:
+                              '\nSunday, June 5th at 10 am\nJalans Bhawan\nBeawar, Rajasthan',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              // height: 1.5,
+                              color: Colors.black45))
+                    ]),
               ),
-
             ],
           ),
         ],

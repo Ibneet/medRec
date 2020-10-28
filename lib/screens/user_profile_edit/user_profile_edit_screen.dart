@@ -36,43 +36,32 @@ class UserProfileEditScreen extends StatelessWidget {
           Positioned(
             top: 40,
             child: IconButton(
-              icon: Icon(
-                Icons.arrow_back
-              ), 
-              iconSize: 40,
-              color: Colors.white,
-              onPressed: (){
-                Navigator.pop(context);
-              }
-            ),
+                icon: Icon(Icons.arrow_back),
+                iconSize: 40,
+                color: Colors.white,
+                onPressed: () {
+                  Navigator.pop(context);
+                }),
           ),
           Column(
             children: <Widget>[
-              SizedBox(height: appHeight*0.3),
-              FormContainer(
-                userName,
-                userGender,
-                userDob,
-                userEmail,
-                userPhoneNumber,
-                userOccupation
-              )
+              SizedBox(height: appHeight * 0.3),
+              FormContainer(userName, userGender, userDob, userEmail,
+                  userPhoneNumber, userOccupation)
             ],
           ),
           Positioned(
-            top: appHeight*0.17,
-            left: appWidth*0.325,
+            top: appHeight * 0.17,
+            left: appWidth * 0.325,
             child: CircleAvatar(
               radius: 75,
-              backgroundImage: NetworkImage(
-                userImage,
+              backgroundImage: AssetImage(
+                'assets/images/isha.jpeg',
               ),
             ),
           ),
-        ], 
+        ],
       ),
     );
   }
 }
-
-

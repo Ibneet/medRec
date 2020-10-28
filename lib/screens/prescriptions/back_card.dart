@@ -33,7 +33,7 @@ class BackCard extends StatelessWidget {
             padding: EdgeInsets.all(20),
             child: RichText(
               text: TextSpan(
-                  text: 'Dr. Stephen',
+                  text: 'Dr. Ikshit',
                   style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
@@ -42,7 +42,7 @@ class BackCard extends StatelessWidget {
                   children: [
                     TextSpan(
                         text:
-                            '\nSunday, June 5th at 10 am 93 Boston Road,Marlton, NJ 08053',
+                            '\nSunday, June 5th at 10 am 93 Jalans Bhawan,Beawar, Rajasthan',
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,

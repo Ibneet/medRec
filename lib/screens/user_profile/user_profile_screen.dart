@@ -18,18 +18,16 @@ class UserProfileScreen extends StatelessWidget {
           Container(
             width: double.infinity,
             height: appHeight,
-            child: Image.network(
-              currentUser.imageUrl,
+            child: Image.asset(
+              'assets/images/isha.jpeg',
               fit: BoxFit.cover,
             ),
           ),
-
           DraggableSheet(
-            currentUser, 
+            currentUser,
           )
         ],
       ),
     );
   }
 }
-

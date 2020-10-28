@@ -5,22 +5,22 @@ import '../utils.dart';
 
 var reports = [
   {
-    'name': 'Dr Dummy 1',
+    'name': 'Sardhana lab',
     'url':
         'https://cdn.jotfor.ms/form-templates/screenshots/pdf/425x575_2091181867095062/medical-invoice-template.png',
   },
   {
-    'name': 'Dr Dummy 2',
+    'name': 'Sardhana lab',
     'url':
         'https://cdn.jotfor.ms/form-templates/screenshots/pdf/425x575_2091181867095062/medical-invoice-template.png',
   },
   {
-    'name': 'Dr Dummy 3',
+    'name': 'Sardhana lab',
     'url':
         'https://cdn.jotfor.ms/form-templates/screenshots/pdf/425x575_2091181867095062/medical-invoice-template.png',
   },
   {
-    'name': 'Dr Dummy 4',
+    'name': 'Sardhana lab',
     'url':
         'https://cdn.jotfor.ms/form-templates/screenshots/pdf/425x575_2091181867095062/medical-invoice-template.png',
   },

@@ -7,27 +7,27 @@ import '../prescriptions/prescription_flip_card.dart';
 
 var docs = [
   {
-    'name': 'Disease 1',
+    'name': 'Corona Virus',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Disease 1',
+    'name': 'Dengue',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Disease 1',
+    'name': 'Diabetes',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Disease 1',
+    'name': 'Blood Pressure',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
   {
-    'name': 'Disease 1',
+    'name': 'Malaria',
     'url':
         'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSmD1TcAB64G_9bEmyvtBgXdfiGqd9lfo4Kh_HfLjsDqXCfqVlp&usqp=CAU',
   },
